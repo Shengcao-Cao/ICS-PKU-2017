@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)http://tpc.googlesyndication.com/safeframe/1-0-0/html/container.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>SafeFrame Container</title>
+  </head>
+  <body>
+    <script>
+      
+(function(){var c=this;var d=function(b,a){return b<a?-1:b>a?1:0};var e,f,g,h,m=function(){return c.navigator?c.navigator.userAgent:null};h=g=f=e=!1;var n;if(n=m()){var p=c.navigator;e=0==n.lastIndexOf("Opera",0);f=!e&&(-1!=n.indexOf("MSIE")||-1!=n.indexOf("Trident"));g=!e&&-1!=n.indexOf("WebKit");h=!e&&!g&&!f&&"Gecko"==p.product}var q=f,r=h,s=g,u=function(){var b=c.document;return b?b.documentMode:void 0},v;
+r:{var w="",x;if(e&&c.opera)var y=c.opera.version,w="function"==typeof y?y():y;else if(r?x=/rv\:([^\);]+)(\)|;)/:q?x=/\b(?:MSIE|rv)[: ]([^\);]+)(\)|;)/:s&&(x=/WebKit\/(\S+)/),x)var z=x.exec(m()),w=z?z[1]:"";if(q){var A=u();if(A>parseFloat(w)){v=String(A);break r}}v=w}
+var B=v,C={},D=function(b){var a;if(!(a=C[b])){a=0;for(var N=String(B).replace(/^[\s\xa0]+|[\s\xa0]+$/g,"").split("."),O=String(b).replace(/^[\s\xa0]+|[\s\xa0]+$/g,"").split("."),T=Math.max(N.length,O.length),t=0;0==a&&t<T;t++){var U=N[t]||"",V=O[t]||"",W=RegExp("(\\d*)(\\D*)","g"),X=RegExp("(\\d*)(\\D*)","g");do{var k=W.exec(U)||["","",""],l=X.exec(V)||["","",""];if(0==k[0].length&&0==l[0].length)break;a=d(0==k[1].length?0:parseInt(k[1],10),0==l[1].length?0:parseInt(l[1],10))||d(0==k[2].length,0==
+l[2].length)||d(k[2],l[2])}while(0==a)}a=C[b]=0<=a}return a},E=c.document,F=E&&q?u()||("CSS1Compat"==E.compatMode?parseInt(B,10):5):void 0;if(r||q){var G;if(G=q)G=q&&9<=F;G||r&&D("1.9.1")}q&&D("9");s&&document.createElement("iframe");var H=r||s;var I=/^([^;]+);(\d+);([\s\S]*)$/;try{var J=I.exec(window.name);if(null===J)throw"Cannot parse serialized data to extract content.";var K=J[3].substr(0,parseInt(J[2],10)),L=window;if(H){var M=L.document;M.open("text/html","replace");M.write(K);M.close()}else{var P=K,Q;if(Q=q&&D(7)&&!D(10))r:{for(var R=0;R<P.length;++R)if(127<P.charCodeAt(R)){Q=!0;break r}Q=!1}if(Q){for(var S=unescape(encodeURIComponent(P)),Y=Math.floor(S.length/2),Z=[],$=0;$<Y;++$)Z[$]=String.fromCharCode(256*S.charCodeAt(2*$+1)+S.charCodeAt(2*$));1==S.length%2&&
+(Z[Y]=S.charAt(S.length-1));P=Z.join("")}L.goog_content=P;L.location.replace("javascript:window.goog_content")}}catch(aa){};})();
+    </script>
+  
+
+</body></html>

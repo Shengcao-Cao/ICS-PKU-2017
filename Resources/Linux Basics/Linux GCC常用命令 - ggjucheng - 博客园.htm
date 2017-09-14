@@ -1,0 +1,577 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0064)http://www.cnblogs.com/ggjucheng/archive/2011/12/14/2287738.html -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script async="" src="./Linux GCC常用命令 - ggjucheng - 博客园_files/analytics.js"></script>
+
+<title>Linux GCC常用命令 - ggjucheng - 博客园</title>
+<link type="text/css" rel="stylesheet" href="./Linux GCC常用命令 - ggjucheng - 博客园_files/blog-common.css">
+<link id="MainCss" type="text/css" rel="stylesheet" href="./Linux GCC常用命令 - ggjucheng - 博客园_files/bundle-Cogitation.css">
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/ggjucheng/rss">
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/ggjucheng/rsd.xml">
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/ggjucheng/wlwmanifest.xml">
+<script type="text/javascript" src="./Linux GCC常用命令 - ggjucheng - 博客园_files/encoder.js"></script><script async="" type="text/javascript" src="./Linux GCC常用命令 - ggjucheng - 博客园_files/gpt.js"></script><script src="./Linux GCC常用命令 - ggjucheng - 博客园_files/jquery.js" type="text/javascript"></script>  
+<script type="text/javascript">var currentBlogApp = 'ggjucheng', cb_enable_mathjax=false;</script>
+<script src="./Linux GCC常用命令 - ggjucheng - 博客园_files/blog-common.js" type="text/javascript"></script>
+<script async="" type="text/javascript" src="./Linux GCC常用命令 - ggjucheng - 博客园_files/pubads_impl_49.js"></script><script type="text/javascript" src="./Linux GCC常用命令 - ggjucheng - 博客园_files/osd.js"></script></head>
+<body><div id="StayFocusd-infobar" style="display: none; top: 1000px;">
+    <img src="chrome-extension://laankejkbhbdhmipfmgcngdelahlfoji/common/img/eye_19x19_red.png">
+    <span id="StayFocusd-infobar-msg"></span>
+    <span id="StayFocusd-infobar-links">
+        <a id="StayFocusd-infobar-never-show">hide forever</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a id="StayFocusd-infobar-hide">hide once</a>
+    </span>
+</div>
+<a name="top"></a>
+
+<div id="top">
+	
+<div>
+	<table>
+		<tbody><tr>
+			<td class="HeaderTitles">
+				<h1 class="HeaderTitle"><a id="Header1_HeaderTitle" class="HeaderMainTitle" href="http://www.cnblogs.com/ggjucheng/">简单，可复制</a></h1>
+				<p id="tagline">点点滴滴，尽在文中</p>
+			</td>
+		</tr>
+	</tbody></table>
+</div>
+<div class="HeaderBar">
+	<table id="HeaderBar" class="HeaderBar" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td class="HeaderBarTab" nowrap="">
+&nbsp;
+ ::
+<a id="Header1_MyLinks1_MyHomeLink" href="http://www.cnblogs.com/ggjucheng/">首页</a> ::
+<a href="http://q.cnblogs.com/" class="menu">博问</a> ::
+<a href="http://home.cnblogs.com/ing/" class="menu">闪存</a> ::
+<a id="Header1_MyLinks1_NewPostLink" rel="nofollow" href="http://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a> ::
+<a id="Header1_MyLinks1_ContactLink" accesskey="9" rel="nofollow" href="http://space.cnblogs.com/msg/send/ggjucheng">联系</a> ::
+<a id="Header1_MyLinks1_Syndication" href="http://www.cnblogs.com/ggjucheng/rss">订阅</a>
+<a id="Header1_MyLinks1_XMLLink" class="XMLLink" href="http://www.cnblogs.com/ggjucheng/rss"><img src="./Linux GCC常用命令 - ggjucheng - 博客园_files/xml.gif" alt="订阅"></a> ::
+<a id="Header1_MyLinks1_Admin" rel="nofollow" href="http://i.cnblogs.com/">管理</a> ::
+
+</td>
+			<td><img id="Header1_BlueTab" src="./Linux GCC常用命令 - ggjucheng - 博客园_files/BlueTabRight.gif" align="absmiddle"></td>
+			<td class="HeaderBarTabBack" nowrap="" width="100%">
+				
+<div class="BlogStatsBar">
+	<table class="BlogStatsBar">
+		<tbody><tr>
+			<td width="100%">
+			</td>
+			<td class="BlogStatsBar" nowrap="">
+				&nbsp;
+				438 
+				随笔&nbsp;::
+				0 文章
+				::
+				210 评论
+				::
+				0 引用
+			</td>
+		</tr>
+	</tbody></table>
+</div>
+
+			</td>
+		</tr>
+	</tbody></table>
+</div>
+
+</div>
+<div id="leftmenu">	
+
+	    <div id="blog-calendar" style="display:none"></div><script type="text/javascript">loadBlogDefaultCalendar();</script>
+		
+<h3>公告</h3>
+<div class="News">
+	<div id="blog-news"><br>
+<a href="http://www.svn999.com/?bokeyuan"><font size="4">小团队的免费svn空间</font></a>
+<br>
+
+<br>
+<div id="weibowidget"><iframe width="190" height="100" class="share_self" frameborder="0" scrolling="no" src="./Linux GCC常用命令 - ggjucheng - 博客园_files/index.htm"></iframe></div><div id="profile_block">昵称：<a href="http://home.cnblogs.com/u/ggjucheng/">ggjucheng</a><br>园龄：<a href="http://home.cnblogs.com/u/ggjucheng/" title="入园时间：2011-12-13">2年9个月</a><br>粉丝：<a href="http://home.cnblogs.com/u/ggjucheng/followers/">341</a><br>关注：<a href="http://home.cnblogs.com/u/ggjucheng/followees/">6</a><div id="p_b_follow"></div><div style="display: none" id="__document_write_ajax_div-2"></div></div></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+		<div id="blog-sidecolumn">
+		<h3>博客地图</h3>
+		
+				<ul>
+			
+				<li><a id="CatList_LinkList_0_Link_0" href="http://www.cnblogs.com/ggjucheng/archive/2012/08/18/2645319.html">c/c++笔记</a> </li>
+			<li class="c_b_p_link_desc">本人学习c/c++的一些笔记</li>
+				<li><a id="CatList_LinkList_0_Link_1" href="http://www.cnblogs.com/ggjucheng/archive/2012/11/02/2751119.html">db笔记</a> </li>
+			<li class="c_b_p_link_desc">mysql nosql</li>
+				<li><a id="CatList_LinkList_0_Link_2" href="http://www.cnblogs.com/ggjucheng/archive/2012/04/22/2465625.html">hadoop笔记</a> </li>
+			<li class="c_b_p_link_desc">本人工作中hadoop的心得</li>
+				<li><a id="CatList_LinkList_0_Link_3" href="http://www.cnblogs.com/ggjucheng/archive/2013/01/20/2868837.html">internet笔记</a> </li>
+			<li class="c_b_p_link_desc">互联网学习笔记</li>
+				<li><a id="CatList_LinkList_0_Link_4" href="http://www.cnblogs.com/ggjucheng/archive/2012/11/19/2777695.html">java笔记</a> </li>
+			<li class="c_b_p_link_desc">java平台笔记</li>
+				<li><a id="CatList_LinkList_0_Link_5" href="http://www.cnblogs.com/ggjucheng/archive/2012/08/18/2645321.html">Linux/Unix笔记</a> </li>
+			<li class="c_b_p_link_desc">本人学习linux/unix的笔记 <br></li>
+				<li><a id="CatList_LinkList_0_Link_6" href="http://www.cnblogs.com/ggjucheng/archive/2012/08/18/2645324.html">TCP/IP笔记</a> </li>
+			<li class="c_b_p_link_desc">本人学习TCP/IP的心得和笔记</li>
+				<li><a id="CatList_LinkList_0_Link_7" href="http://www.cnblogs.com/ggjucheng/p/3348355.html" rel="nofollow">web开发</a> </li>
+			<li class="c_b_p_link_desc">html css js php etc.....</li>
+				<li><a id="CatList_LinkList_0_Link_8" href="http://www.cnblogs.com/ggjucheng/p/3348282.html" rel="nofollow">技术花絮</a> </li>
+			<li class="c_b_p_link_desc">非技术的技术</li>
+				<li><a id="CatList_LinkList_0_Link_9" href="http://www.cnblogs.com/ggjucheng/archive/2011/12/15/2288839.html">其他笔记本</a> </li>
+			<li class="c_b_p_link_desc">比较零碎的技术文章归类</li>
+				<li><a id="CatList_LinkList_0_Link_10" href="http://www.cnblogs.com/ggjucheng/archive/2012/11/17/2774916.html">学习指南</a> </li>
+			<li class="c_b_p_link_desc">IT技术学习路线,IT经典书籍学习和下载</li>
+				</ul>
+			
+	
+		<h3>友情链接</h3>
+		
+				<ul>
+			
+				<li><a id="CatList_LinkList_1_Link_0" href="http://itfun.ingchat.com/" rel="nofollow" target="_blank">IT短篇笑话</a> </li>
+			<li class="c_b_p_link_desc">百忙中，可以看看it短篇笑话，笑一笑，放松下！</li>
+				<li><a id="CatList_LinkList_1_Link_1" href="http://vipcode.svn999.com/index.php?c=product&id=25" rel="nofollow" target="_blank">JavaCoins【BTC交易平台源码下载】</a> </li>
+			<li class="c_b_p_link_desc">Java语言的BTC交易平台</li>
+				<li><a id="CatList_LinkList_1_Link_2" href="http://www.svn999.com/" rel="nofollow" target="_blank">挺不错的免费svn空间</a> </li>
+			<li class="c_b_p_link_desc">国内挺不错的svn免费空间，很适合小团队使用</li>
+				</ul>
+			
+	
+<h3>积分与排名</h3>
+<ul>
+	<li>
+		积分 -
+		539816
+	</li><li>
+		排名 -
+		130
+	</li>
+</ul>
+<div id="recent_comments_wrap">
+<h3 class="catListTitle">最新评论</h3>
+<div class="RecentComment" id="RecentComments">
+	<div id="RecentCommentsBlock"><ul>
+    <li class="recent_comment_title"><a href="http://www.cnblogs.com/ggjucheng/archive/2012/07/25/2608633.html#3030212">1. Re:hive并发调用的运行方式-个人经验篇</a></li>
+    <li class="recent_comment_body"><a href="http://www.cnblogs.com/ggjucheng/archive/2011/12/14/2287738.html#3029969" title="查看所回复的评论" onclick="commentManager.renderComments(0,50,3029969);">@</a>maybe618<br>可以人工删除。</li>
+    <li class="recent_comment_author">--ggjucheng</li>
+    <li class="recent_comment_title"><a href="http://www.cnblogs.com/ggjucheng/p/3977185.html#3030021">2. Re:hadoop2升级的那点事情(详解)</a></li>
+    <li class="recent_comment_body">值得mark，希望楼主多分享些文章。</li>
+    <li class="recent_comment_author">--我是豆豆</li>
+    <li class="recent_comment_title"><a href="http://www.cnblogs.com/ggjucheng/archive/2012/07/25/2608633.html#3029969">3. Re:hive并发调用的运行方式-个人经验篇</a></li>
+    <li class="recent_comment_body">@ggjucheng人工删除的话是否会有问题呢？因为库里面这样的表已经有200多张表了，打开这个库的速度非常慢，也就导致hivesql从提交 开始就很慢了，另外，请问COLUMNS 这个表是否要经常清理？非常感谢...</li>
+    <li class="recent_comment_author">--maybe618</li>
+    <li class="recent_comment_title"><a href="http://www.cnblogs.com/ggjucheng/archive/2012/07/25/2608633.html#3029495">4. Re:hive并发调用的运行方式-个人经验篇</a></li>
+    <li class="recent_comment_body">@maybe618会自动删除的，最好禁止mysql用户自动生成deleteme表，否则在多台机器的hive并发时，很容易出问题。可以在hive自动生成mysql表后，收回mysql用户的建表权限。...</li>
+    <li class="recent_comment_author">--ggjucheng</li>
+    <li class="recent_comment_title"><a href="http://www.cnblogs.com/ggjucheng/archive/2012/07/25/2608633.html#3029447">5. Re:hive并发调用的运行方式-个人经验篇</a></li>
+    <li class="recent_comment_body">你好，请问 在 mysql表里生存了很多 deleteme 表，还有几个月前的都没有自动删除，请问这些是否垃圾数据，并且手动清除？</li>
+    <li class="recent_comment_author">--maybe618</li>
+</ul>
+</div>
+</div>
+</div><div id="topview_posts_wrap">
+<h3 class="catListTitle">阅读排行榜</h3>
+<div class="RecentComment" id="TopViewPosts"> 
+	<div id="TopViewPostsBlock"><ul><li><a href="http://www.cnblogs.com/ggjucheng/archive/2012/01/14/2322659.html">1. Linux tcpdump命令详解(185841)</a></li><li><a href="http://www.cnblogs.com/ggjucheng/archive/2012/01/08/2316661.html">2. Linux netstat命令详解(107708)</a></li><li><a href="http://www.cnblogs.com/ggjucheng/archive/2013/01/13/2858470.html">3. linux awk命令详解(104253)</a></li><li><a href="./Linux GCC常用命令 - ggjucheng - 博客园_files/Linux GCC常用命令 - ggjucheng - 博客园.htm">4. Linux GCC常用命令(84189)</a></li><li><a href="http://www.cnblogs.com/ggjucheng/archive/2012/01/05/2312625.html">5. Linux vmstat命令实战详解(40607)</a></li></ul></div>
+</div>
+</div><div id="topfeedback_posts_wrap">
+<h3 class="catListTitle">评论排行榜</h3>
+<div class="RecentComment" id="TopCommentsPosts">
+	<div id="TopFeedbackPostsBlock"><ul><li><a href="http://www.cnblogs.com/ggjucheng/archive/2011/12/16/2290158.html">1. Linux入门——适合初学者(12)</a></li><li><a href="http://www.cnblogs.com/ggjucheng/archive/2012/01/14/2322659.html">2. Linux tcpdump命令详解(11)</a></li><li><a href="http://www.cnblogs.com/ggjucheng/archive/2012/08/19/2646007.html">3. 实例讲解虚拟机3种网络模式(桥接、nat、Host-only)(11)</a></li><li><a href="http://www.cnblogs.com/ggjucheng/archive/2013/01/08/2850797.html">4. hive sql遇到的问题(9)</a></li><li><a href="http://www.cnblogs.com/ggjucheng/archive/2012/01/04/2311967.html">5. 异常不可用于逻辑处理(8)</a></li></ul></div>
+</div></div><div id="topdigg_posts_wrap">
+<h3 class="catListTitle">推荐排行榜</h3>
+<div class="RecentComment">
+	<div id="TopDiggPostsBlock"><ul><li><a href="http://www.cnblogs.com/ggjucheng/archive/2012/01/14/2322659.html">1. Linux tcpdump命令详解(23)</a></li><li><a href="http://www.cnblogs.com/ggjucheng/archive/2013/01/13/2858470.html">2. linux awk命令详解(21)</a></li><li><a href="./Linux GCC常用命令 - ggjucheng - 博客园_files/Linux GCC常用命令 - ggjucheng - 博客园.htm">3. Linux GCC常用命令(20)</a></li><li><a href="http://www.cnblogs.com/ggjucheng/archive/2012/01/08/2316661.html">4. Linux netstat命令详解(15)</a></li><li><a href="http://www.cnblogs.com/ggjucheng/archive/2011/12/16/2290158.html">5. Linux入门——适合初学者(7)</a></li></ul></div>
+</div></div></div><script type="text/javascript">loadBlogSideColumn();</script>
+	
+</div>
+<div id="main">
+	
+
+<div class="post">
+	<div class="postTitle">
+		<a id="cb_post_title_url" href="./Linux GCC常用命令 - ggjucheng - 博客园_files/Linux GCC常用命令 - ggjucheng - 博客园.htm">Linux GCC常用命令</a>
+	</div>
+	
+	<div class="postText">
+		<div id="cnblogs_post_body"><p><a href="http://www.cnblogs.com/ggjucheng/archive/2011/12/14/2287738.html#_Toc311642840">1简介</a></p>
+<p><a href="http://www.cnblogs.com/ggjucheng/archive/2011/12/14/2287738.html#_Toc311642841">2简单编译</a></p>
+<p><a href="http://www.cnblogs.com/ggjucheng/archive/2011/12/14/2287738.html#_Toc311642842">2.1预处理</a></p>
+<p><a href="http://www.cnblogs.com/ggjucheng/archive/2011/12/14/2287738.html#_Toc311642843">2.2编译为汇编代码(Compilation)</a></p>
+<p><a href="http://www.cnblogs.com/ggjucheng/archive/2011/12/14/2287738.html#_Toc311642844">2.3汇编(Assembly)</a></p>
+<p><a href="http://www.cnblogs.com/ggjucheng/archive/2011/12/14/2287738.html#_Toc311642845">2.4连接(Linking)</a></p>
+<p><a href="http://www.cnblogs.com/ggjucheng/archive/2011/12/14/2287738.html#_Toc311642846">3多个程序文件的编译</a></p>
+<p><a href="http://www.cnblogs.com/ggjucheng/archive/2011/12/14/2287738.html#_Toc311642847">4检错</a></p>
+<p><a href="http://www.cnblogs.com/ggjucheng/archive/2011/12/14/2287738.html#_Toc311642848">5库文件连接</a></p>
+<p><a href="http://www.cnblogs.com/ggjucheng/archive/2011/12/14/2287738.html#_Toc311642849">5.1编译成可执行文件</a></p>
+<p><a href="http://www.cnblogs.com/ggjucheng/archive/2011/12/14/2287738.html#_Toc311642850">5.2链接</a></p>
+<p><a href="http://www.cnblogs.com/ggjucheng/archive/2011/12/14/2287738.html#_Toc311642851">5.3强制链接时使用静态链接库</a></p>
+<h4><a name="_Toc311642840"></a>1简介</h4>
+<p>GCC 的意思也只是 GNU C Compiler 而已。经过了这么多年的发展，GCC 已经不仅仅能支持 C 语言；它现在还支持 Ada 语言、C++ 语言、Java 语言、Objective C 语言、Pascal 语言、COBOL语言，以及支持函数式编程和逻辑编程的 Mercury 语言，等等。而 GCC 也不再单只是 GNU C 语言编译器的意思了，而是变成了 GNU Compiler Collection 也即是 GNU 编译器家族的意思了。另一方面，说到 GCC 对于操作系统平台及硬件平台支持，概括起来就是一句话：无所不在。</p>
+<h4><a name="_Toc311642841"></a>2简单编译</h4>
+<p>示例程序如下：</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Linux GCC常用命令 - ggjucheng - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #008000;">//</span><span style="color: #008000;">test.c</span><span style="color: #008000;"><br></span>#include &lt;stdio.h&gt;<br><span style="color: #0000ff;">int</span> main(<span style="color: #0000ff;">void</span>)<br>{<br>    printf(<span style="color: #800000;">"</span><span style="color: #800000;">Hello World!\n</span><span style="color: #800000;">"</span>);<br>    <span style="color: #0000ff;">return</span> <span style="color: #800080;">0</span>;<br>}</pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Linux GCC常用命令 - ggjucheng - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>这个程序，一步到位的编译指令是:</p>
+<div class="cnblogs_code">
+<pre>gcc test.c -o test</pre>
+</div>
+<p><br><br></p>
+<p>实质上，上述编译过程是分为四个阶段进行的，即预处理(也称预编译，Preprocessing)、编译(Compilation)、汇编 (Assembly)和连接(Linking)。</p>
+<h5><a name="_Toc311642842"></a>2.1预处理</h5>
+<div class="cnblogs_code">
+<pre>gcc -E test.c -o test.i 或 gcc -E test.c</pre>
+</div>
+<p>&nbsp;</p>
+<p>可以输出test.i文件中存放着test.c经预处理之后的代码。打开test.i文件，看一看，就明白了。后面那条指令，是直接在命令行窗口中输出预处理后的代码.</p>
+<p>gcc的-E选项，可以让编译器在预处理后停止，并输出预处理结果。在本例中，预处理结果就是将stdio.h 文件中的内容插入到test.c中了。</p>
+<h5><a name="_Toc311642843"></a>2.2编译为汇编代码(Compilation)</h5>
+<p>预处理之后，可直接对生成的test.i文件编译，生成汇编代码：</p>
+<div class="cnblogs_code">
+<pre>gcc -S test.i -o test.s</pre>
+</div>
+<p>gcc的-S选项，表示在程序编译期间，在生成汇编代码后，停止，-o输出汇编代码文件。</p>
+<h5><a name="_Toc311642844"></a>2.3汇编(Assembly)</h5>
+<p>对于上一小节中生成的汇编代码文件test.s，gas汇编器负责将其编译为目标文件，如下：</p>
+<div class="cnblogs_code">
+<pre>gcc -c test.s -o test.o</pre>
+</div>
+<h5><a name="_Toc311642845"></a>2.4连接(Linking)</h5>
+<p>gcc连接器是gas提供的，负责将程序的目标文件与所需的所有附加的目标文件连接起来，最终生成可执行文件。附加的目标文件包括静态连接库和动态连接库。</p>
+<p>对于上一小节中生成的test.o，将其与Ｃ标准输入输出库进行连接，最终生成程序test</p>
+<div class="cnblogs_code">
+<pre>gcc test.o -o test</pre>
+</div>
+<p>&nbsp;</p>
+<p>在命令行窗口中，执行./test, 让它说HelloWorld吧！</p>
+<h4><a name="_Toc311642846"></a>3多个程序文件的编译</h4>
+<p>通常整个程序是由多个源文件组成的，相应地也就形成了多个编译单元，使用GCC能够很好地管理这些编译单元。假设有一个由test1.c和 test2.c两个源文件组成的程序，为了对它们进行编译，并最终生成可执行程序test，可以使用下面这条命令：</p>
+<p>gcc test1.c test2.c -o test</p>
+<p>如果同时处理的文件不止一个，GCC仍然会按照预处理、编译和链接的过程依次进行。如果深究起来，上面这条命令大致相当于依次执行如下三条命令：</p>
+<div class="cnblogs_code">
+<pre>gcc -c test1.c -o test1.o<br>gcc -c test2.c -o test2.o<br>gcc test1.o test2.o -o test</pre>
+</div>
+<p><br><br></p>
+<h4><a name="_Toc311642847"></a>4检错</h4>
+<div class="cnblogs_code">
+<pre>gcc -pedantic illcode.c -o illcode</pre>
+</div>
+<p>-pedantic编译选项并不能保证被编译程序与ANSI/ISO C标准的完全兼容，它仅仅只能用来帮助Linux程序员离这个目标越来越近。或者换句话说，-pedantic选项能够帮助程序员发现一些不符合 ANSI/ISO C标准的代码，但不是全部，事实上只有ANSI/ISO C语言标准中要求进行编译器诊断的那些情况，才有可能被GCC发现并提出警告。</p>
+<p>除了-pedantic之外，GCC还有一些其它编译选项也能够产生有用的警告信息。这些选项大多以-W开头，其中最有价值的当数-Wall了，使用它能够使GCC产生尽可能多的警告信息。</p>
+<div class="cnblogs_code">
+<pre>gcc -Wall illcode.c -o illcode</pre>
+</div>
+<p>GCC给出的警告信息虽然从严格意义上说不能算作错误，但却很可能成为错误的栖身之所。一个优秀的Linux程序员应该尽量避免产生警告信息，使自己的代码始终保持标准、健壮的特性。所以将警告信息当成编码错误来对待，是一种值得赞扬的行为！所以，在编译程序时带上-Werror选项，那么GCC会在所有产生警告的地方停止编译，迫使程序员对自己的代码进行修改，如下：</p>
+<div class="cnblogs_code">
+<pre>gcc -Werror test.c -o test</pre>
+</div>
+<p>&nbsp;</p>
+<h4><a name="_Toc311642848"></a></h4>
+<h4>5库文件连接</h4>
+<p>开发软件时，完全不使用第三方函数库的情况是比较少见的，通常来讲都需要借助许多函数库的支持才能够完成相应的功能。从程序员的角度看，函数库实际上就是一些头文件（.h）和库文件（so、或lib、dll）的集合。。虽然Linux下的大多数函数都默认将头文件放到/usr/include/目录下，而库文件则放到/usr/lib/目录下；Windows所使用的库文件主要放在Visual Stido的目录下的include和lib，以及系统文件夹下。但也有的时候，我们要用的库不再这些目录下，所以GCC在编译时必须用自己的办法来查找所需要的头文件和库文件。</p>
+<p>例如我们的程序test.c是在linux上使用c连接mysql，这个时候我们需要去mysql官网下载MySQL Connectors的C库，下载下来解压之后，有一个include文件夹，里面包含mysql connectors的头文件，还有一个lib文件夹，里面包含二进制so文件libmysqlclient.so</p>
+<p>其中inclulde文件夹的路径是/usr/dev/mysql/include,lib文件夹是/usr/dev/mysql/lib</p>
+<p>&nbsp;</p>
+<h5><a name="_Toc311642849"></a>5.1编译成可执行文件</h5>
+<p>首先我们要进行编译test.c为目标文件，这个时候需要执行</p>
+<div class="cnblogs_code">
+<pre>gcc –c –I /usr/dev/mysql/include test.c –o test.o</pre>
+</div>
+<h5><a name="_Toc311642850"></a>5.2链接</h5>
+<p>最后我们把所有目标文件链接成可执行文件:</p>
+<div class="cnblogs_code">
+<pre>gcc –L /usr/dev/mysql/lib –lmysqlclient test.o –o test</pre>
+</div>
+<p>Linux下的库文件分为两大类分别是动态链接库（通常以.so结尾）和静态链接库（通常以.a结尾），二者的区别仅在于程序执行时所需的代码是在运行时动态加载的，还是在编译时静态加载的。</p>
+<h5><a name="_Toc311642851"></a>5.3强制链接时使用静态链接库</h5>
+<p>默认情况下， GCC在链接时优先使用动态链接库，只有当动态链接库不存在时才考虑使用静态链接库，如果需要的话可以在编译时加上-static选项，强制使用静态链接库。</p>
+<p>在/usr/dev/mysql/lib目录下有链接时所需要的库文件libmysqlclient.so和libmysqlclient.a，为了让GCC在链接时只用到静态链接库，可以使用下面的命令:</p>
+<div class="cnblogs_code">
+<pre>gcc –L /usr/dev/mysql/lib –<span style="color: #0000ff;">static</span> –lmysqlclient test.o –o test</pre>
+</div>
+<p>&nbsp;</p>
+<p>静态库链接时搜索路径顺序：</p>
+<p>1. ld会去找GCC命令中的参数-L<br>2. 再找gcc的环境变量LIBRARY_PATH<br>3. 再找内定目录 /lib /usr/lib /usr/local/lib 这是当初compile gcc时写在程序内的</p>
+<p>动态链接时、执行时搜索路径顺序:</p>
+<p>1. 编译目标代码时指定的动态库搜索路径<br>2. 环境变量LD_LIBRARY_PATH指定的动态库搜索路径<br>3. 配置文件/etc/ld.so.conf中指定的动态库搜索路径<br>4. 默认的动态库搜索路径/lib<br>5. 默认的动态库搜索路径/usr/lib</p>
+<p>有关环境变量：<br>LIBRARY_PATH环境变量：指定程序静态链接库文件搜索路径<br>LD_LIBRARY_PATH环境变量：指定程序动态链接库文件搜索路径</p>
+<p><br><br></p></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory">分类: <a href="http://www.cnblogs.com/ggjucheng/category/342328.html">Linux/Unix</a></div>
+<div id="EntryTag">标签: <a href="http://www.cnblogs.com/ggjucheng/tag/Linux%2FUnix_GCC/">Linux/Unix_GCC</a></div>
+<div id="blog_post_info"><div id="green_channel">
+绿色通道：
+<a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(2287738,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
+<a id="green_channel_follow" onclick="c_follow();" href="javascript:void(0);">关注我</a>
+<a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a><a id="green_channel_contact" href="http://space.cnblogs.com/msg/send/ggjucheng" target="_blank">与我联系</a>
+<a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="./Linux GCC常用命令 - ggjucheng - 博客园_files/icon_weibo_24.png" alt=""></a>
+</div>
+<div id="author_profile">
+<div id="author_profile_info" class="author_profile_info">
+<a href="http://home.cnblogs.com/u/ggjucheng/" target="_blank"><img src="./Linux GCC常用命令 - ggjucheng - 博客园_files/u360373.jpg" class="author_avatar" alt=""></a>
+<div id="author_profile_detail" class="author_profile_info">
+<a href="http://home.cnblogs.com/u/ggjucheng/">ggjucheng</a><br>
+<a href="http://home.cnblogs.com/u/ggjucheng/followees">关注 - 6</a><br>
+<a href="http://home.cnblogs.com/u/ggjucheng/followers">粉丝 - 341</a>
+</div>
+</div>
+<div class="clear"></div>
+<div id="author_profile_honor"></div>
+<div id="author_profile_follow">
+    <a href="javascript:void(0);" onclick="c_follow();return false;">+加关注</a>
+</div>
+</div>
+<div id="div_digg">										
+    <div class="diggit" onclick="votePost(2287738,&#39;Digg&#39;)">
+        <span class="diggnum" id="digg_count">20</span>
+    </div>
+	<div class="buryit" onclick="votePost(2287738,&#39;Bury&#39;)"> 
+		<span class="burynum" id="bury_count">0</span>
+	</div>
+	<div class="clear"></div>	
+	<div class="diggword" id="digg_tips">
+    (请您对文章做出评价)
+    </div>	
+</div>
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"><a href="http://www.cnblogs.com/ggjucheng/archive/2011/12/14/2287591.html" class="p_n_p_prefix">« </a> 上一篇：<a href="http://www.cnblogs.com/ggjucheng/archive/2011/12/14/2287591.html" title="发布于2011-12-14 14:54">C++运算符重载</a><br><a href="http://www.cnblogs.com/ggjucheng/archive/2011/12/14/2288004.html" class="p_n_p_prefix">» </a> 下一篇：<a href="http://www.cnblogs.com/ggjucheng/archive/2011/12/14/2288004.html" title="发布于2011-12-14 19:52">GDB详解</a><br></div>
+</div>
+
+
+	</div>
+	
+	<div class="postfoot">
+		posted on <span id="post-date">2011-12-14 16:21</span> <a href="http://www.cnblogs.com/ggjucheng/">ggjucheng</a> 阅读(<span id="post_view_count">84196</span>) 评论(<span id="post_comment_count">7</span>)  <a href="http://i.cnblogs.com/EditPosts.aspx?postid=2287738" rel="nofollow">编辑</a> <a href="http://www.cnblogs.com/ggjucheng/archive/2011/12/14/2287738.html#" onclick="AddToWz(2287738);return false;">收藏</a>
+	</div>
+</div>
+<script type="text/javascript">var allowComments=true,isLogined=false,cb_blogId=104392,cb_entryId=2287738,cb_blogApp=currentBlogApp,cb_blogUserGuid='d3935eec-4025-e111-b422-842b2b196315',cb_entryCreatedDate='2011/12/14 16:21:00';loadViewCount(cb_entryId);</script>
+
+<a name="!comments"></a><div id="blog-comments-placeholder"><div id="comments_pager_top"></div>
+<a name="comments"></a>
+<br>
+<div id="comments">
+<h3>评论</h3>
+
+
+		<div class="post">			
+			<div class="postTitle">
+				<a href="http://www.cnblogs.com/ggjucheng/archive/2011/12/14/2287738.html#2456116" class="layer">#1楼</a><a name="2456116" id="comment_anchor_2456116"></a>
+					<span>
+						 <span class="comment_date">2012-08-25 18:36</span>
+					</span>
+				<a id="a_comment_author_2456116" href="http://home.cnblogs.com/u/441260/" target="_blank">catcher24</a> <a href="http://msg.cnblogs.com/msg/send/catcher24" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="postText">
+				<div id="comment_body_2456116" class="blog_comment_body">试了楼主所说的命令，但是执行到：gcc -S test.i -o test.s时出现了错误：<br>警告： 隐式声明与内建函数‘printf’不兼容 [默认启用]<br>在网上也没找到具体的解决办法，请问这是为什么？</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2456116,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2456116,&#39;Bury&#39;,this)">反对(0)</a></div>
+			</div>
+            <div class="commentOpt">
+			&nbsp;&nbsp;<span class="comment_actions"></span>
+            </div>
+		</div>
+		<br>
+	
+		<div class="post">			
+			<div class="postTitle">
+				<a href="http://www.cnblogs.com/ggjucheng/archive/2011/12/14/2287738.html#2462980" class="layer">#2楼</a><a name="2462980" id="comment_anchor_2462980"></a>[<span class="louzhu">楼主</span>]
+					<span>
+						 <span class="comment_date">2012-09-03 23:30</span>
+					</span>
+				<a id="a_comment_author_2462980" href="http://www.cnblogs.com/ggjucheng/" target="_blank">ggjucheng</a> <a href="http://msg.cnblogs.com/msg/send/ggjucheng" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="postText">
+				<div id="comment_body_2462980" class="blog_comment_body"><a href="http://www.cnblogs.com/ggjucheng/archive/2011/12/14/2287738.html#2456116" title="查看所回复的评论" onclick="commentManager.renderComments(0,50,2456116);">@</a>catcher24<br>只是警告而已，也没啥！<br>看看你的printf函数调用的那些变量，如果可以就贴出来，我帮你看看，应该是变量类型和声明不一致。</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2462980,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2462980,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_2462980_avatar" style="display:none;">http://pic.cnitblog.com/face/u360373.jpg?id=14105431</span>
+			</div>
+            <div class="commentOpt">
+			&nbsp;&nbsp;<span class="comment_actions"></span>
+            </div>
+		</div>
+		<br>
+	
+		<div class="post">			
+			<div class="postTitle">
+				<a href="http://www.cnblogs.com/ggjucheng/archive/2011/12/14/2287738.html#2495578" class="layer">#3楼</a><a name="2495578" id="comment_anchor_2495578"></a>
+					<span>
+						 <span class="comment_date">2012-10-18 10:13</span>
+					</span>
+				<a id="a_comment_author_2495578" href="http://www.cnblogs.com/ezhong/" target="_blank">ezhong</a> <a href="http://msg.cnblogs.com/msg/send/ezhong" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="postText">
+				<div id="comment_body_2495578" class="blog_comment_body">攒个~！</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2495578,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2495578,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_2495578_avatar" style="display:none;">http://pic.cnitblog.com/face/u195641.jpg?id=19231009</span>
+			</div>
+            <div class="commentOpt">
+			&nbsp;&nbsp;<span class="comment_actions"></span>
+            </div>
+		</div>
+		<br>
+	
+		<div class="post">			
+			<div class="postTitle">
+				<a href="http://www.cnblogs.com/ggjucheng/archive/2011/12/14/2287738.html#2594982" class="layer">#4楼</a><a name="2594982" id="comment_anchor_2594982"></a>
+					<span>
+						 <span class="comment_date">2013-01-08 07:47</span>
+					</span>
+				<a id="a_comment_author_2594982" href="http://www.cnblogs.com/azheng007/" target="_blank">阿正-WEB</a> <a href="http://msg.cnblogs.com/msg/send/%e9%98%bf%e6%ad%a3-WEB" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="postText">
+				<div id="comment_body_2594982" class="blog_comment_body">谢谢楼主详细的描述，学习了。</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2594982,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2594982,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_2594982_avatar" style="display:none;">http://pic.cnitblog.com/face/u215082.jpg?id=18171511</span>
+			</div>
+            <div class="commentOpt">
+			&nbsp;&nbsp;<span class="comment_actions"></span>
+            </div>
+		</div>
+		<br>
+	
+		<div class="post">			
+			<div class="postTitle">
+				<a href="http://www.cnblogs.com/ggjucheng/archive/2011/12/14/2287738.html#2885938" class="layer">#5楼</a><a name="2885938" id="comment_anchor_2885938"></a>
+					<span>
+						 <span class="comment_date">2014-03-02 09:28</span>
+					</span>
+				<a id="a_comment_author_2885938" href="http://home.cnblogs.com/u/607465/" target="_blank">风轻云净</a> <a href="http://msg.cnblogs.com/msg/send/%e9%a3%8e%e8%bd%bb%e4%ba%91%e5%87%80" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="postText">
+				<div id="comment_body_2885938" class="blog_comment_body">简单，通俗易懂，谢谢楼主分享。</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2885938,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2885938,&#39;Bury&#39;,this)">反对(0)</a></div>
+			</div>
+            <div class="commentOpt">
+			&nbsp;&nbsp;<span class="comment_actions"></span>
+            </div>
+		</div>
+		<br>
+	
+		<div class="post">			
+			<div class="postTitle">
+				<a href="http://www.cnblogs.com/ggjucheng/archive/2011/12/14/2287738.html#2910364" class="layer">#6楼</a><a name="2910364" id="comment_anchor_2910364"></a>
+					<span>
+						 <span class="comment_date">2014-04-03 09:20</span>
+					</span>
+				<a id="a_comment_author_2910364" href="http://www.cnblogs.com/honglihua8688/" target="_blank">honglihua</a> <a href="http://msg.cnblogs.com/msg/send/honglihua" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="postText">
+				<div id="comment_body_2910364" class="blog_comment_body">谢谢楼主分享，收益了！！</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2910364,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2910364,&#39;Bury&#39;,this)">反对(0)</a></div>
+			</div>
+            <div class="commentOpt">
+			&nbsp;&nbsp;<span class="comment_actions"></span>
+            </div>
+		</div>
+		<br>
+	
+		<div class="post">			
+			<div class="postTitle">
+				<a href="http://www.cnblogs.com/ggjucheng/archive/2011/12/14/2287738.html#2941168" class="layer">#7楼</a><a name="2941168" id="comment_anchor_2941168"></a><span id="comment-maxId" style="display:none;">2941168</span><span id="comment-maxDate" style="display:none;">2014/5/18 13:52:00</span>
+					<span>
+						 <span class="comment_date">2014-05-18 13:52</span>
+					</span>
+				<a id="a_comment_author_2941168" href="http://home.cnblogs.com/u/634819/" target="_blank">dayeblegger</a> <a href="http://msg.cnblogs.com/msg/send/dayeblegger" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="postText">
+				<div id="comment_body_2941168" class="blog_comment_body">谢谢楼主</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(2941168,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(2941168,&#39;Bury&#39;,this)">反对(0)</a></div>
+			</div>
+            <div class="commentOpt">
+			&nbsp;&nbsp;<span class="comment_actions"></span>
+            </div>
+		</div>
+		<br>
+	
+</div><div id="comments_pager_bottom"></div></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" id="lnk_RefreshComments" onclick="return RefreshCommentList();">刷新评论</a><a href="http://www.cnblogs.com/ggjucheng/archive/2011/12/14/2287738.html#" onclick="return RefreshPage();">刷新页面</a><a href="http://www.cnblogs.com/ggjucheng/archive/2011/12/14/2287738.html#top">返回顶部</a></div>
+<div id="comment_form_container"><div class="login_tips">注册用户登录后才能发表评论，请 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login(&#39;commentform&#39;);">登录</a> 或 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，<a href="http://www.cnblogs.com/">访问</a>网站首页。</div></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="site_nav_under"><a href="http://www.imooc.com/view/94?from=cnblogs" target="_blank"><b>【免费课程】案例：WEB在线文件管理器</b></a><br><a href="http://zt.cnblogs.com/tingyun/" target="_blank">听云APP性能监测——终结移动App性能黑洞</a><br><a href="http://oneapm.com/events/ironman.html?hmsr=%E5%8D%9A%E5%AE%A2%E5%9B%AD&hmmd=%E6%96%87%E7%AB%A0%E5%86%85%E9%A1%B5%E6%96%87%E5%AD%97%E9%93%BE&hmpl=&hmkw=&hmci=" target="_blank">100%有礼！机械键盘、钢铁侠T恤免费拿！OneAPM送福利！</a><br><a href="http://www.rongcloud.cn/promotion/" target="_blank">融云，免费为你的App加入IM功能——让你的App“聊”起来！！</a></div>
+<div id="opt_under_post"></div>
+<script type="text/javascript">
+    var enableGoogleAd = canShowAdsense(); var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
+    fixPostBodyFormat();
+</script>
+<div id="ad_under_post_holder">
+<script type="text/javascript">
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+    (function () {
+        if (enableGoogleAd) {
+            var gads = document.createElement('script');
+            gads.async = true;
+            gads.type = 'text/javascript';
+            var useSSL = 'https:' == document.location.protocol;
+            gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+            var node = document.getElementsByTagName('script')[0];
+            node.parentNode.insertBefore(gads, node);
+        }
+    })();
+</script>
+<script type="text/javascript">
+    try {
+        if (enableGoogleAd) {
+            googletag.cmd.push(function () {
+                googletag.defineSlot('/1090369/cnblogs_blogpost_C1_sitehome', [300, 250], 'div-gpt-ad-1346480159711-0').addService(googletag.pubads());
+                googletag.defineSlot('/1090369/cnblogs_blogpost_C2', [468, 60], 'div-gpt-ad-1410860226396-0').addService(googletag.pubads());
+                googletag.pubads().enableSingleRequest();
+                googletag.enableServices();
+            });
+        };
+    } catch (e) { }
+</script>
+<div id="google_ad_c1" class="c_ad_block">
+    <div id="div-gpt-ad-1346480159711-0" style="width:300px; height:250px;">
+    <script type="text/javascript">
+        try {
+            if (enableGoogleAd) {
+                googletag.cmd.push(function () { googletag.display('div-gpt-ad-1346480159711-0'); });            
+            } else {
+                $('#div-gpt-ad-1346480159711-0').hide();
+            }
+    } catch (e) { }
+    </script>
+    <div id="google_ads_iframe_/1090369/cnblogs_blogpost_C1_sitehome_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/1090369/cnblogs_blogpost_C1_sitehome_0" name="google_ads_iframe_/1090369/cnblogs_blogpost_C1_sitehome_0" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:"<html><body style='background:transparent'></body></html>"" style="border: 0px; vertical-align: bottom;"></iframe></div><iframe id="google_ads_iframe_/1090369/cnblogs_blogpost_C1_sitehome_0__hidden__" name="google_ads_iframe_/1090369/cnblogs_blogpost_C1_sitehome_0__hidden__" width="0" height="0" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:"<html><body style='background:transparent'></body></html>"" style="border: 0px; vertical-align: bottom; visibility: hidden; display: none;"></iframe></div>
+</div>
+</div>
+<div id="under_post_news"><div class="itnews c_ad_block"><b>最新IT新闻</b>:<br> ·  <a href="http://news.cnblogs.com/n/503961/" target="_blank">到底卡不卡？iPhone 4S升级iOS 8体验</a><br> ·  <a href="http://news.cnblogs.com/n/503960/" target="_blank">1999元！新一代Kindle电子书来了：更好用</a><br> ·  <a href="http://news.cnblogs.com/n/503959/" target="_blank">迷信“需求至上”，是一个创业陷阱</a><br> ·  <a href="http://news.cnblogs.com/n/503958/" target="_blank">NASA联手波音、SpaceX研发“太空的士”</a><br> ·  <a href="http://news.cnblogs.com/n/503957/" target="_blank">捐款美国哈佛大学香港富豪：在内地行善像自讨麻烦</a><br>» <a href="http://news.cnblogs.com/" title="IT新闻" target="_blank">更多新闻...</a></div></div>
+<div id="google_ad_c2" class="c_ad_block">
+<div id="div-gpt-ad-1410860226396-0" style="width:468px; height:60px;">
+<script type="text/javascript">
+try {
+    if (enableGoogleAd) {
+        googletag.cmd.push(function () { googletag.display('div-gpt-ad-1410860226396-0'); });
+    } else {
+        $('#div-gpt-ad-1346480159711-0').hide();
+    }
+} catch (e) { }
+</script>
+<div id="google_ads_iframe_/1090369/cnblogs_blogpost_C2_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/1090369/cnblogs_blogpost_C2_0" name="google_ads_iframe_/1090369/cnblogs_blogpost_C2_0" width="468" height="60" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:"<html><body style='background:transparent'></body></html>"" style="border: 0px; vertical-align: bottom;"></iframe></div></div>
+</div>
+<div id="under_post_kb"><div class="itnews c_ad_block" id="kb_block"><b>最新知识库文章</b>:<br><div id="kb_recent"> ·  <a href="http://kb.cnblogs.com/page/503769/" target="_blank">伟大的程序员是怎样炼成的？</a><br> ·  <a href="http://kb.cnblogs.com/page/502776/" target="_blank">DevOps——现代开发高手的终极秘诀</a><br> ·  <a href="http://kb.cnblogs.com/page/502549/" target="_blank">向上管理：管理自己的老板</a><br> ·  <a href="http://kb.cnblogs.com/page/503604/" target="_blank">网站，越简单越好</a><br> ·  <a href="http://kb.cnblogs.com/page/503460/" target="_blank">构建高可伸缩性的WEB交互式系统（上）</a><br></div>» <a href="http://kb.cnblogs.com/" target="_blank">更多知识库文章...</a></div></div>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+$(function () {
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 200);
+});
+</script>
+</div>
+
+</div>
+<div class="footer">
+
+<p id="footer">
+	Powered by: 
+	<br>
+	
+	<a id="Footer1_Hyperlink3" name="Hyperlink1" href="http://www.cnblogs.com/" style="font-family:Verdana;font-size:12px;">博客园</a>
+	<br>
+	Copyright © ggjucheng
+</p>
+</div>
+<!--PageEndHtml Block Begin-->
+<script src="./Linux GCC常用命令 - ggjucheng - 博客园_files/stat.php" language="JavaScript"></script><script src="./Linux GCC常用命令 - ggjucheng - 博客园_files/core.php" charset="utf-8" type="text/javascript"></script><iframe src="./Linux GCC常用命令 - ggjucheng - 博客园_files/container.htm" style="visibility: hidden; display: none;"></iframe><script src="./Linux GCC常用命令 - ggjucheng - 博客园_files/online_v3.php" charset="utf-8" type="text/javascript"></script><a href="http://www.cnzz.com/stat/website.php?web_id=4902471" target="_blank">站长统计</a>
+<!--PageEndHtml Block End-->
+
+
+<iframe id="google_osd_static_frame_1691371719352" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;"></iframe></body></html>
