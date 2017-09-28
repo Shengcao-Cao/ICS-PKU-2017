@@ -16,6 +16,8 @@
 
 Be careful about "rounding toward $+\infty$".
 
+This requirement is quite ambiguous. If we replace "rounding toward $+\infty$" with "rounding to even", we'll get a different result. "0 00000 101 ($\frac{5}{131072}$)" would be "0 0000 0000 ($0$)", and "1 11011 000 ($-4096$)" would be "1 1111 0000 ($-\infty$)".
+
 ### 2.92
 
 ```c
