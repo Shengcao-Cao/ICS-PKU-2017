@@ -1,0 +1,3 @@
+b explode_bomb
+b initialize_bomb
+b send_msg
