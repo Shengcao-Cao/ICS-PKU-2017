@@ -1,0 +1,7 @@
+401a28 movq rax rdi
+401a37 popq rax
+401a5b rax = rdi + rsi
+401a68 movq rsp rax
+401a88 movl ecx edx
+401a9b movl eax ecx
+401abe movl edx esi

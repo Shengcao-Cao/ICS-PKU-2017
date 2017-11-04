@@ -1,0 +1,63 @@
+# Cao Shengcao - 1500012838
+    .pos 0
+
+init:
+    irmovl Stack,%esp
+    irmovl Stack,%ebp
+    call Main
+    halt
+
+    .align 4
+    src:
+        .long 0x00a
+        .long 0x0b0
+        .long 0xc00
+    dest:
+        .long 0x111
+        .long 0x222
+        .long 0x333
+
+copy_block:
+    pushl %ebp
+    rrmovl %esp,%ebp
+    mrmovl 0x8(%ebp),%edi
+    mrmovl 0xc(%ebp),%esi
+    mrmovl 0x10(%ebp),%ecx
+    irmovl $0x0,%eax
+    andl %ecx,%ecx
+    je copy_block_end
+
+copy_block_loop:
+    mrmovl (%edi),%edx
+    rmmovl %edx,(%esi)
+    xorl %edx,%eax
+    irmovl $0x4,%edx
+    addl %edx,%edi
+    addl %edx,%esi
+    irmovl $0x1,%edx
+    subl %edx,%ecx
+    andl %ecx,%ecx
+    jne copy_block_loop
+
+copy_block_end:
+    rrmovl %ebp,%esp
+    popl %ebp
+    ret
+
+Main:
+    pushl %ebp
+    rrmovl %esp,%ebp
+    irmovl $0x3,%eax
+    pushl %eax
+    irmovl dest,%eax
+    pushl %eax
+    irmovl src,%eax
+    pushl %eax
+    call copy_block
+    rrmovl %ebp,%esp
+    popl %ebp
+    ret
+    
+    .pos 0x100
+
+Stack:
